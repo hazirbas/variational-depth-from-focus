@@ -281,7 +281,8 @@ int main(int argc, char **argv) {
 
   cout << "time elapsed: " << methods->tocInSeconds() << " s" << endl; 
   cout << "======================================================================" <<endl;
-  cout << "Total elapsed time: " << total->tocInSeconds() << " s" << endl;
+  float totalTime = total->tocInSeconds();
+  cout << "Total elapsed time: " << totalTime << " s" << endl;
 
   // crop result, if padding was used
   Mat croppedRes;
@@ -305,7 +306,7 @@ int main(int argc, char **argv) {
   Utils::memprint();
   cout<<"press any key while the image window is active to exit"<<endl;
   //require user input to exit
-  waitKey(0);
+  // waitKey(2);
 
   // if user specified an export file, we save the result
   if(!params.exportFilename.empty()) {
@@ -326,5 +327,6 @@ int main(int argc, char **argv) {
   delete total;
   delete methods;
 
+  cout << totalTime;
   return 0;
 }

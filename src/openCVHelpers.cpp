@@ -248,7 +248,7 @@ namespace vdff {
 
       if (doResize) resize(heatMap, heatMap, Size(), 0.5, 0.5);
   
-      showImage(wndTitle, heatMap, posX, posY);
+      //showImage(wndTitle, heatMap, posX, posY);
 
       return heatMap;
     }
